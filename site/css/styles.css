@@ -350,35 +350,7 @@ section{position:relative;z-index:2;padding:120px 0}
   overflow:hidden;
   box-shadow:var(--shadow);
 }
-.about-image img{aspect-ratio:4/5;object-fit:cover;width:100%}
-.about-image::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,transparent 60%,rgba(42,31,94,.45));
-}
-.about-image-badge{
-  position:absolute;
-  bottom:24px;left:24px;right:24px;
-  z-index:2;
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  color:#fff;
-}
-.about-image-badge strong{
-  font-family:'Fraunces',serif;
-  font-size:32px;
-  font-weight:400;
-  display:block;
-  line-height:1;
-}
-.about-image-badge span{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  opacity:.85;
-}
+.about-image img{display:block;width:100%;height:auto}
 
 .about-list{
   list-style:none;
