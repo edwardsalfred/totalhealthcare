@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /competitive-analysis.html
+
+Sitemap: https://www.totalhealthcareclinicllc.com/sitemap.xml

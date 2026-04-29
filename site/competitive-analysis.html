@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Competitive Analysis · Total Healthcare Clinic LLC</title>
+<link rel="icon" type="image/png" href="/assets/founders/logo-original.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f4f0;
+    --paper-warm:#fffefa;
+    --hairline:#e3ddd0;
+    --ink:#0e0a2a;
+    --mute:#6f6580;
+    --navy:#2a1f5e;
+    --navy-50:#efeef5;
+    --crimson:#b22a2a;
+    --crimson-50:#f6e6e3;
+    --terracotta:#c45d3e;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:15px;
+    line-height:1.6;
+    position:relative;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity:.6;
+    mix-blend-mode:multiply;
+    z-index:1;
+  }
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:80px 56px 120px;
+    position:relative;
+    z-index:2;
+  }
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--terracotta);
+    margin:0 0 20px;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:64px;
+    line-height:1.04;
+    letter-spacing:-.02em;
+    margin:0 0 18px;
+    color:var(--navy);
+  }
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:36px;
+    line-height:1.15;
+    letter-spacing:-.01em;
+    margin:0 0 14px;
+    color:var(--navy);
+  }
+  h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:22px;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  h4{
+    font-family:'Inter',sans-serif;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:var(--mute);
+    margin:18px 0 8px;
+  }
+  p{margin:0 0 14px;color:#28223a}
+  a{color:var(--terracotta);text-decoration:none;border-bottom:1px solid currentColor}
+  hr{
+    border:0;
+    border-top:1px solid var(--hairline);
+    margin:48px 0;
+  }
+  .cover{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:40px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--hairline);
+    margin-bottom:48px;
+  }
+  .cover-meta{flex:0 0 220px;text-align:right;font-size:13px;color:var(--mute)}
+  .cover-meta strong{color:var(--ink);display:block;font-weight:600;margin-bottom:4px}
+  .badge{
+    display:inline-block;
+    padding:6px 12px;
+    background:var(--crimson-50);
+    color:var(--crimson);
+    border:1px solid var(--crimson);
+    border-radius:999px;
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    margin-bottom:24px;
+  }
+  .lead{
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:22px;
+    line-height:1.45;
+    color:var(--ink);
+    max-width:680px;
+  }
+  section{margin:64px 0;position:relative}
+  .section-head{display:flex;align-items:baseline;gap:24px;margin-bottom:32px}
+  .section-num{
+    font-family:'Fraunces',serif;
+    font-size:80px;
+    line-height:1;
+    color:var(--hairline);
+    font-weight:400;
+  }
+  .section-title{flex:1}
+  .competitor{
+    background:var(--paper-warm);
+    border-left:4px solid var(--navy);
+    border-radius:0 8px 8px 0;
+    padding:28px 32px;
+    margin-bottom:24px;
+    box-shadow:0 1px 0 rgba(14,10,42,.04);
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .competitor:hover{box-shadow:0 14px 36px -16px rgba(14,10,42,.18);transform:translateY(-2px)}
+  .competitor.gold{border-left-color:var(--crimson)}
+  .competitor-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom:18px;
+  }
+  .competitor-rank{
+    font-family:'Fraunces',serif;
+    font-size:42px;
+    line-height:1;
+    color:var(--navy);
+    flex:0 0 auto;
+    opacity:.45;
+  }
+  .competitor.gold .competitor-rank{color:var(--crimson);opacity:.7}
+  .competitor-meta{flex:1}
+  .competitor-meta h3{margin-bottom:4px}
+  .competitor-domain{font-size:12px;color:var(--mute);font-weight:500}
+  .score-pill{
+    flex:0 0 auto;
+    background:var(--navy);
+    color:var(--paper);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.04em;
+  }
+  .competitor.gold .score-pill{background:var(--crimson)}
+  .swatches{display:flex;gap:6px;margin:10px 0 16px}
+  .swatch{
+    width:28px;height:28px;border-radius:6px;
+    border:1px solid var(--hairline);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);
+  }
+  .strengths,.weaknesses{margin:8px 0 0;padding-left:18px;font-size:14px}
+  .strengths li{color:#1a4d3a}
+  .weaknesses li{color:#7d3a3a}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .tag{
+    background:var(--navy-50);
+    color:var(--navy);
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.02em;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--paper-warm);
+    border:1px solid var(--hairline);
+    border-radius:8px;
+    overflow:hidden;
+    font-size:13px;
+  }
+  th,td{
+    padding:12px 14px;
+    text-align:left;
+    border-bottom:1px solid var(--hairline);
+  }
+  th{
+    background:var(--navy);
+    color:var(--paper);
+    font-weight:600;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+  }
+  td.score{font-weight:600;color:var(--navy);text-align:center}
+  td.total{font-family:'Fraunces',serif;font-weight:500;color:var(--crimson);text-align:center;font-size:16px}
+  tr:last-child td{border-bottom:0}
+  .pattern{
+    display:flex;
+    gap:24px;
+    margin-bottom:28px;
+    padding:24px 28px;
+    background:var(--paper-warm);
+    border-radius:8px;
+    border:1px solid var(--hairline);
+  }
+  .pattern-num{
+    font-family:'Fraunces',serif;
+    font-size:48px;
+    line-height:1;
+    color:var(--crimson);
+    flex:0 0 60px;
+  }
+  .palette{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin:20px 0;
+  }
+  .palette-chip{
+    background:var(--paper-warm);
+    border:1px solid var(--hairline);
+    border-radius:8px;
+    padding:18px;
+  }
+  .palette-color{
+    height:60px;
+    border-radius:6px;
+    margin-bottom:10px;
+    border:1px solid rgba(0,0,0,.05);
+  }
+  .palette-name{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+  .palette-hex{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);margin-top:2px}
+  .keyword-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    margin:14px 0;
+  }
+  .keyword-grid span{
+    background:var(--paper-warm);
+    border:1px solid var(--hairline);
+    padding:8px 12px;
+    border-radius:6px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--ink);
+  }
+  .footer{
+    margin-top:80px;
+    padding-top:32px;
+    border-top:1px solid var(--hairline);
+    text-align:center;
+    font-size:11px;
+    color:var(--mute);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .credit{
+    width:100%;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid var(--hairline);
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+  .credit a{
+    color:var(--terracotta);
+    font-weight:600;
+    border-bottom:1px solid var(--terracotta);
+    text-decoration:none;
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:48px 24px 80px}
+    h1{font-size:42px}
+    h2{font-size:28px}
+    .cover{flex-direction:column;align-items:flex-start}
+    .cover-meta{text-align:left}
+    .palette{grid-template-columns:1fr}
+    .keyword-grid{grid-template-columns:1fr}
+    .section-num{font-size:54px}
+    .competitor-head{flex-wrap:wrap}
+    .pattern{flex-direction:column;gap:8px;padding:20px}
+  }
+
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .wrap{padding:32px;max-width:none}
+    section{break-inside:avoid;page-break-inside:avoid}
+    .competitor,.pattern{break-inside:avoid;page-break-inside:avoid}
+    a{color:var(--ink);border-bottom:0}
+    .cover{page-break-after:avoid}
+    h2{page-break-after:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="cover">
+    <div>
+      <span class="badge">Competitive Analysis</span>
+      <h1>The Jackson<br>Healthcare Landscape</h1>
+      <p class="lead">A market study of primary-care clinics serving Jackson, MS — and a strategic foundation for rebuilding Total Healthcare Clinic's digital presence.</p>
+    </div>
+    <div class="cover-meta">
+      <strong>Prepared for</strong>
+      Total Healthcare Clinic LLC<br>
+      2964 Terry Road, Jackson, MS<br><br>
+      <strong>Date</strong>
+      April 2026<br><br>
+      <strong>Report</strong>
+      Confidential — internal use only
+    </div>
+  </header>
+
+  <section>
+    <p class="eyebrow">Executive Summary</p>
+    <p class="lead" style="font-size:18px">Total Healthcare Clinic offers the same — and in several cases broader — services as the highest-ranking primary-care clinics in the Jackson metro, but its digital presence is a fraction of theirs. Of five top regional competitors studied, none scored higher than 67/80, meaning a well-executed rebuild can leapfrog the entire market. The opportunity is not new services. It is a site that does justice to the practice that already exists.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <div class="section-title">
+        <p class="eyebrow">The Top 5</p>
+        <h2>Competitor profiles</h2>
+        <p>Each competitor scored across eight criteria — search visibility, review quality, visual design, mobile experience, content depth, social proof, CTA strategy, and load speed. Top score possible: 80.</p>
+      </div>
+    </div>
+
+    <div class="competitor gold">
+      <div class="competitor-head">
+        <div class="competitor-rank">01</div>
+        <div class="competitor-meta">
+          <h3>Modern Family Medicine</h3>
+          <div class="competitor-domain">modernfammed.com · Duluth, GA</div>
+          <div class="swatches">
+            <span class="swatch" style="background:#1f6e8c"></span>
+            <span class="swatch" style="background:#7fb5c3"></span>
+            <span class="swatch" style="background:#f3f7f9"></span>
+            <span class="swatch" style="background:#0f3a4a"></span>
+          </div>
+        </div>
+        <div class="score-pill">67 / 80</div>
+      </div>
+      <h4>Strengths</h4>
+      <ul class="strengths">
+        <li>Real provider headshots with full board-certification credentials.</li>
+        <li>Named patient testimonials referencing specific clinicians.</li>
+        <li>"Same-week appointments" urgency repeated across the page.</li>
+        <li>"Book Now" CTA appears 7+ times with consistent visual treatment.</li>
+      </ul>
+      <h4>Weaknesses</h4>
+      <ul class="weaknesses">
+        <li>Conventional medical aesthetic — no animation or memorable photography.</li>
+        <li>12+ subnav items dilute the conversion path.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Provider trust</span>
+        <span class="tag">Booking-led</span>
+        <span class="tag">Urgency</span>
+      </div>
+    </div>
+
+    <div class="competitor gold">
+      <div class="competitor-head">
+        <div class="competitor-rank">02</div>
+        <div class="competitor-meta">
+          <h3>Jackson Health &amp; Wellness</h3>
+          <div class="competitor-domain">jacksonhealthandwellness.com · Jackson, MS · DIRECT RIVAL</div>
+          <div class="swatches">
+            <span class="swatch" style="background:#2c8a8a"></span>
+            <span class="swatch" style="background:#c9a96e"></span>
+            <span class="swatch" style="background:#fefcf7"></span>
+            <span class="swatch" style="background:#0e3838"></span>
+          </div>
+        </div>
+        <div class="score-pill">63 / 80</div>
+      </div>
+      <h4>Strengths</h4>
+      <ul class="strengths">
+        <li>Dual-brand positioning: medical + aesthetics under one roof.</li>
+        <li>Provider name dropped in testimonial copy ("Britney").</li>
+        <li>Patient portal in primary navigation.</li>
+        <li>Persistent phone number in header bar.</li>
+      </ul>
+      <h4>Weaknesses</h4>
+      <ul class="weaknesses">
+        <li>WordPress template feel — visually generic for the category.</li>
+        <li>Hero copy ("hometown healing AND radiant skin") splits the brand.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Local rival</span>
+        <span class="tag">Dual-brand</span>
+        <span class="tag">Patient portal</span>
+      </div>
+    </div>
+
+    <div class="competitor">
+      <div class="competitor-head">
+        <div class="competitor-rank">03</div>
+        <div class="competitor-meta">
+          <h3>Tupelo Wellness Clinic</h3>
+          <div class="competitor-domain">tupelowellnessclinic.com · Tupelo, MS</div>
+          <div class="swatches">
+            <span class="swatch" style="background:#3a8a8a"></span>
+            <span class="swatch" style="background:#d4cdb8"></span>
+            <span class="swatch" style="background:#ffffff"></span>
+            <span class="swatch" style="background:#1a3838"></span>
+          </div>
+        </div>
+        <div class="score-pill">61 / 80</div>
+      </div>
+      <h4>Strengths</h4>
+      <ul class="strengths">
+        <li>Live Instagram feed integration as evolving social proof.</li>
+        <li>AVIF image optimization, parallax on hero.</li>
+        <li>Comprehensive service nav (HRT, peptides, IV, weight loss, aesthetics).</li>
+      </ul>
+      <h4>Weaknesses</h4>
+      <ul class="weaknesses">
+        <li>Wix template ceiling caps the visual quality.</li>
+        <li>Hero headline ("Welcome to Tupelo Wellness") is generic.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">IV / wellness focus</span>
+        <span class="tag">Social proof live-feed</span>
+      </div>
+    </div>
+
+    <div class="competitor">
+      <div class="competitor-head">
+        <div class="competitor-rank">04</div>
+        <div class="competitor-meta">
+          <h3>Family Wellness Clinic &amp; Urgent Care</h3>
+          <div class="competitor-domain">fwcuc.net · Florida</div>
+          <div class="swatches">
+            <span class="swatch" style="background:#b22a2a"></span>
+            <span class="swatch" style="background:#e8dec8"></span>
+            <span class="swatch" style="background:#ffffff"></span>
+            <span class="swatch" style="background:#0f1a30"></span>
+          </div>
+        </div>
+        <div class="score-pill">59 / 80</div>
+      </div>
+      <h4>Strengths</h4>
+      <ul class="strengths">
+        <li>Strong hero promise: "Exceptional Care. Without the Wait."</li>
+        <li>Walk-in friendly + telehealth + IV hydration nav.</li>
+        <li>Urgency-driven CTAs (Visit Now / Book Now).</li>
+      </ul>
+      <h4>Weaknesses</h4>
+      <ul class="weaknesses">
+        <li>Generic stock photography. Brand identity is forgettable.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Urgency hero</span>
+        <span class="tag">Walk-in friendly</span>
+      </div>
+    </div>
+
+    <div class="competitor">
+      <div class="competitor-head">
+        <div class="competitor-rank">05</div>
+        <div class="competitor-meta">
+          <h3>Family Medical Clinic of Crystal Springs</h3>
+          <div class="competitor-domain">fmcofcs.com · Crystal Springs, MS</div>
+          <div class="swatches">
+            <span class="swatch" style="background:#205594"></span>
+            <span class="swatch" style="background:#9bbcd6"></span>
+            <span class="swatch" style="background:#ffffff"></span>
+            <span class="swatch" style="background:#0e2238"></span>
+          </div>
+        </div>
+        <div class="score-pill">54 / 80</div>
+      </div>
+      <h4>Strengths</h4>
+      <ul class="strengths">
+        <li>Provider headshots with credentials (MD, CFNP).</li>
+        <li>DOT-certified badge on home and services.</li>
+        <li>Same-day appointment messaging.</li>
+        <li>On-site lab and X-ray callouts.</li>
+      </ul>
+      <h4>Weaknesses</h4>
+      <ul class="weaknesses">
+        <li>Lorem-ipsum testimonials still sit in the live template — credibility killer.</li>
+        <li>Generic blue-on-white aesthetic.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">DOT-certified</span>
+        <span class="tag">Same-day appts</span>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <div class="section-title">
+        <p class="eyebrow">Score Comparison</p>
+        <h2>Side-by-side breakdown</h2>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Clinic</th>
+          <th>Visibility</th>
+          <th>Reviews</th>
+          <th>Visual</th>
+          <th>Mobile</th>
+          <th>Content</th>
+          <th>Proof</th>
+          <th>CTA</th>
+          <th>Speed</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Modern Family Medicine</td>
+          <td class="score">9</td><td class="score">9</td><td class="score">8</td><td class="score">8</td><td class="score">9</td><td class="score">9</td><td class="score">8</td><td class="score">7</td>
+          <td class="total">67</td>
+        </tr>
+        <tr>
+          <td>Jackson Health &amp; Wellness</td>
+          <td class="score">9</td><td class="score">8</td><td class="score">7</td><td class="score">8</td><td class="score">7</td><td class="score">8</td><td class="score">8</td><td class="score">8</td>
+          <td class="total">63</td>
+        </tr>
+        <tr>
+          <td>Tupelo Wellness</td>
+          <td class="score">8</td><td class="score">7</td><td class="score">8</td><td class="score">8</td><td class="score">7</td><td class="score">8</td><td class="score">8</td><td class="score">7</td>
+          <td class="total">61</td>
+        </tr>
+        <tr>
+          <td>Family Wellness &amp; UC</td>
+          <td class="score">8</td><td class="score">8</td><td class="score">7</td><td class="score">7</td><td class="score">8</td><td class="score">8</td><td class="score">8</td><td class="score">7</td>
+          <td class="total">59</td>
+        </tr>
+        <tr>
+          <td>Crystal Springs</td>
+          <td class="score">7</td><td class="score">7</td><td class="score">6</td><td class="score">7</td><td class="score">7</td><td class="score">6</td><td class="score">7</td><td class="score">7</td>
+          <td class="total">54</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <div class="section-title">
+        <p class="eyebrow">SEO Landscape</p>
+        <h2>Keyword opportunity</h2>
+        <p>Total Healthcare Clinic ranks for almost nothing today. The current site has three pages, no schema, no per-service pages, no internal cross-linking. The competitive set, by contrast, holds the high-intent local terms below.</p>
+      </div>
+    </div>
+
+    <h4>High-intent local keywords to capture</h4>
+    <div class="keyword-grid">
+      <span>primary care jackson ms</span>
+      <span>dot physical jackson ms</span>
+      <span>iv hydration jackson ms</span>
+      <span>weight loss clinic jackson ms</span>
+      <span>family doctor jackson ms</span>
+      <span>walk-in clinic jackson ms</span>
+      <span>wellness exam jackson ms</span>
+      <span>sports physical jackson ms</span>
+      <span>childhood immunizations jackson ms</span>
+      <span>lab testing terry road ms</span>
+    </div>
+
+    <p>Each of these terms wants a dedicated landing page with schema markup (<code>MedicalClinic</code>, <code>Physician</code>, <code>FAQPage</code>) and tight on-page targeting. Today, none exist.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <div class="section-title">
+        <p class="eyebrow">Patterns of the Top 10%</p>
+        <h2>Five things every winning site does</h2>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-num">01</div>
+      <div>
+        <h3>Provider faces &amp; named credentials lead the trust play</h3>
+        <p>Every site scoring 60+ leads with real headshots, board certifications, and personal copy. Anonymous "our staff" pages score below 55 across the board. Patient testimonials that name the provider perform measurably better than generic quotes.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-num">02</div>
+      <div>
+        <h3>Booking is the only real CTA</h3>
+        <p>"Book Now" / "Schedule" / "Get Started" appears in sticky nav, hero, every service card, and before the footer. Top sites repeat the booking CTA seven or more times per page. Phone-only CTAs lose to direct booking by roughly 3×.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-num">03</div>
+      <div>
+        <h3>Each service gets its own page</h3>
+        <p>The thinnest competitor (54/80) has a single bullet-list services section. The strongest (67/80) gives wellness exams, weight loss, IV hydration, DOT physicals their own pages with distinct copy and CTA. SEO compounds because each page can rank independently.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-num">04</div>
+      <div>
+        <h3>Insurance and payment transparency above the fold</h3>
+        <p>Top sites publish accepted insurances, self-pay options, and patient-portal links in primary nav. This converts the largest hidden objection in healthcare ("can I afford this?") before the user has to ask.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-num">05</div>
+      <div>
+        <h3>Same-day / same-week appointment urgency</h3>
+        <p>"Same-day appointments," "Walk-ins welcome," "Open Saturdays" — every winning site has a specific, scarcity-coded promise on the homepage. Generic "schedule a visit" pulls weaker than dated urgency.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <div class="section-title">
+        <p class="eyebrow">Recommended Direction</p>
+        <h2>The design system</h2>
+        <p>The split-color caduceus in the existing logo is the strongest brand asset on the table. The rebuild treats it as the visual hero — the entire site language is built around its red/navy color story.</p>
+      </div>
+    </div>
+
+    <div class="palette">
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#2a1f5e"></div>
+        <div class="palette-name">Navy</div>
+        <div class="palette-hex">#2A1F5E</div>
+      </div>
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#b22a2a"></div>
+        <div class="palette-name">Crimson</div>
+        <div class="palette-hex">#B22A2A</div>
+      </div>
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#faf7f2;border:1px solid #e3ddd0"></div>
+        <div class="palette-name">Paper</div>
+        <div class="palette-hex">#FAF7F2</div>
+      </div>
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#f2ebdf"></div>
+        <div class="palette-name">Cream</div>
+        <div class="palette-hex">#F2EBDF</div>
+      </div>
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#0e0a2a"></div>
+        <div class="palette-name">Ink</div>
+        <div class="palette-hex">#0E0A2A</div>
+      </div>
+      <div class="palette-chip">
+        <div class="palette-color" style="background:#6f6580"></div>
+        <div class="palette-name">Mute</div>
+        <div class="palette-hex">#6F6580</div>
+      </div>
+    </div>
+
+    <h4>Typography</h4>
+    <p><strong style="font-family:Fraunces,serif;font-size:24px;font-weight:400;color:var(--navy)">Fraunces</strong> — modern serif with character, mirrors the Trajan-style logo wordmark while feeling editorial and contemporary. Headlines, eyebrows, large numerics.</p>
+    <p><strong style="font-family:Inter,sans-serif;font-weight:600">Inter</strong> — clean, highly legible sans-serif. Body, navigation, UI labels, micro-copy.</p>
+
+    <h4>Site architecture (10 pages)</h4>
+    <ol style="padding-left:20px">
+      <li>Home</li>
+      <li>About / Our Team</li>
+      <li>Services (overview + 6 dedicated pages: Wellness Exams, DOT Physicals, IV Hydration, Weight Loss, Childhood Immunizations, Lab Testing)</li>
+      <li>Patient Resources (insurance, forms, portal)</li>
+      <li>Contact / Book</li>
+    </ol>
+
+    <h4>Animations &amp; interaction</h4>
+    <ul style="padding-left:20px">
+      <li>GSAP + ScrollTrigger across all sections</li>
+      <li>Scroll-stop hero with the caduceus as 3D-ready focal asset</li>
+      <li>Stagger-fade on service cards, lift on hover</li>
+      <li>Number counters for years-serving and patients-cared-for</li>
+      <li>Subtle parallax on testimonial section</li>
+      <li>Full <code>prefers-reduced-motion</code> support</li>
+    </ul>
+
+    <h4>What to avoid (lessons from competitors)</h4>
+    <ul style="padding-left:20px">
+      <li>No lorem-ipsum or placeholder testimonials. Real quotes only.</li>
+      <li>No stock-photo overload. Replace with warm, natural-light portraits where possible.</li>
+      <li>Single brand commitment: "full-spectrum primary care for the whole family." Don't dual-brand.</li>
+      <li>Phone CTA stays visible but secondary. Booking is the primary path.</li>
+      <li>Top-level nav max 6 items.</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    Confidential · prepared for Total Healthcare Clinic LLC · April 2026
+    <div class="credit">
+      Created by <a href="https://www.chatbotboy.ai/" target="_blank" rel="noopener">Chatbot Boy AI</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

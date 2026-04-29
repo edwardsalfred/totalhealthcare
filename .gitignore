@@ -1,0 +1,13 @@
+.claude/
+.playwright-mcp/
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+.vscode/
+.idea/
+
+# Local screenshots from QA
+desktop-*.png
+mobile-*.png
+report-*.png
