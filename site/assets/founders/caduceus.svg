@@ -1,0 +1,99 @@
+<svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Total Healthcare caduceus">
+  <defs>
+    <style>
+      .navy{fill:#2a1f5e}
+      .crim{fill:#b22a2a}
+      .navy-stroke{stroke:#2a1f5e;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .crim-stroke{stroke:#b22a2a;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- ============== WINGS ============== -->
+  <!-- LEFT WING (navy) — three feather layers, longest on top -->
+  <g class="navy">
+    <!-- Top feather (longest, slight upward sweep) -->
+    <path d="M120 64
+             C 95 50, 60 48, 22 56
+             C 50 56, 80 60, 110 70
+             C 100 68, 95 67, 90 66 Z"/>
+    <!-- Middle feather -->
+    <path d="M120 70
+             C 100 64, 70 68, 30 78
+             C 60 74, 90 75, 115 78
+             C 105 76, 100 75, 95 74 Z"/>
+    <!-- Bottom feather (shorter) -->
+    <path d="M120 76
+             C 105 74, 80 78, 50 92
+             C 75 84, 100 82, 118 84
+             C 110 82, 108 80, 105 78 Z"/>
+  </g>
+
+  <!-- RIGHT WING (crimson) — mirror of left -->
+  <g class="crim">
+    <path d="M120 64
+             C 145 50, 180 48, 218 56
+             C 190 56, 160 60, 130 70
+             C 140 68, 145 67, 150 66 Z"/>
+    <path d="M120 70
+             C 140 64, 170 68, 210 78
+             C 180 74, 150 75, 125 78
+             C 135 76, 140 75, 145 74 Z"/>
+    <path d="M120 76
+             C 135 74, 160 78, 190 92
+             C 165 84, 140 82, 122 84
+             C 130 82, 132 80, 135 78 Z"/>
+  </g>
+
+  <!-- ============== SHAFT (subtle vertical guide) ============== -->
+  <line x1="120" y1="72" x2="120" y2="278" stroke="#2a1f5e" stroke-width="1" opacity="0.0"/>
+
+  <!-- ============== SNAKE HEADS (under wings) ============== -->
+  <!-- Left head (navy) - small bulb pointing slightly out -->
+  <path class="navy" d="M114 78
+                        Q 108 72, 102 78
+                        Q 102 90, 110 92
+                        Q 116 88, 114 78 Z"/>
+  <!-- Right head (crimson) -->
+  <path class="crim" d="M126 78
+                        Q 132 72, 138 78
+                        Q 138 90, 130 92
+                        Q 124 88, 126 78 Z"/>
+
+  <!-- ============== HELIX (woven) ============== -->
+  <!-- The helix has 3 loops between 4 cross-points: y=92, 142, 192, 242
+       Snake A (navy) bulges: right, left, right (alternating each loop)
+       Snake B (crim) bulges: left, right, left
+       Render order ensures the front snake at each loop appears on top.
+       Stroke width 11 for a clean cylindrical look.
+  -->
+
+  <!-- LOOP 1 (y 92 → 142): A bulges right (front), B bulges left (back) -->
+  <path class="crim-stroke" stroke-width="11"
+        d="M118 92 C 96 100, 96 134, 118 142"/>
+  <path class="navy-stroke" stroke-width="11"
+        d="M122 92 C 144 100, 144 134, 122 142"/>
+
+  <!-- LOOP 2 (y 142 → 192): A bulges left (back), B bulges right (front) -->
+  <path class="navy-stroke" stroke-width="11"
+        d="M122 142 C 144 150, 144 184, 122 192"/>
+  <path class="crim-stroke" stroke-width="11"
+        d="M118 142 C 96 150, 96 184, 118 192"/>
+
+  <!-- LOOP 3 (y 192 → 242): A bulges right (front), B bulges left (back) -->
+  <path class="crim-stroke" stroke-width="11"
+        d="M118 192 C 96 200, 96 234, 118 242"/>
+  <path class="navy-stroke" stroke-width="11"
+        d="M122 192 C 144 200, 144 234, 122 242"/>
+
+  <!-- ============== TAILS (converging at bottom) ============== -->
+  <path class="navy-stroke" stroke-width="9"
+        d="M122 242 Q 124 260, 122 276"/>
+  <path class="crim-stroke" stroke-width="9"
+        d="M118 242 Q 116 260, 118 276"/>
+
+  <!-- Small tail tips meeting -->
+  <ellipse cx="120" cy="278" rx="6" ry="3" fill="#1c1342"/>
+
+  <!-- ============== SHADOW ============== -->
+  <ellipse cx="120" cy="296" rx="34" ry="4" fill="#0e0a2a" opacity="0.16"/>
+</svg>
