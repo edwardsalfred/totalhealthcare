@@ -259,7 +259,8 @@ section{position:relative;z-index:2;padding:120px 0}
   max-width:480px;
   filter:drop-shadow(0 30px 60px rgba(42,31,94,.18));
 }
-.hero-caduceus svg{width:100%;height:auto}
+.hero-caduceus svg,
+.hero-caduceus img{width:100%;height:auto;display:block}
 
 .hero-orbit{
   position:absolute;
