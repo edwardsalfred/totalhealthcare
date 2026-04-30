@@ -142,8 +142,8 @@ section{position:relative;z-index:2;padding:120px 0}
   position:relative;
   z-index:101;
 }
-.nav-brand img{height:46px;transition:height .25s ease}
-.nav.scrolled .nav-brand img{height:40px}
+.nav-brand img{height:68px;transition:height .25s ease}
+.nav.scrolled .nav-brand img{height:56px}
 .nav-links{
   display:flex;
   align-items:center;
@@ -902,7 +902,7 @@ section{position:relative;z-index:2;padding:120px 0}
 
 @media (max-width:380px){
   .nav-brand .wordmark{display:none}
-  .nav-brand img{height:40px}
+  .nav-brand img{height:54px}
   h1{font-size:38px}
   h2{font-size:30px}
   .hero{padding:120px 0 40px}
